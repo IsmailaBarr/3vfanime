@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3vfanime</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        .menutitle{
+        cursor:pointer;
+        margin-bottom: 5px;
+        background-color:#ECECFF;
+        color:#000000;
+        width:140px;
+        padding:2px;
+        text-align:center;
+        font-weight:bold;
+        /*/*/border:1px solid #000000;/* */
+        }
+        
+        .submenu{
+        margin-bottom: 0.5em;
+        }
+        </style>
+        
+        <script type="text/javascript">
+        
+        /***********************************************
+        * Switch Menu script- by Martial B of http://getElementById.com/
+        * Modified by Dynamic Drive for format & NS4/IE4 compatibility
+        * Visit http://www.dynamicdrive.com/ for full source code
+        ***********************************************/
+        
+        var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+        var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page only
+        
+        if (document.getElementById){ //DynamicDrive.com change
+        document.write('<style type="text/css">\n')
+        document.write('.submenu{display: none;}\n')
+        document.write('</style>\n')
+        }
+        
+        function SwitchMenu(obj){
+            if(document.getElementById){
+            var el = document.getElementById(obj);
+            var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+                if(el.style.display != "block"){ //DynamicDrive.com change
+                    for (var i=0; i<ar.length; i++){
+                        if (ar[i].className=="submenu") //DynamicDrive.com change
+                        ar[i].style.display = "none";
+                    }
+                    el.style.display = "block";
+                }else{
+                    el.style.display = "none";
+                }
+            }
+        }
+        
+        function get_cookie(Name) { 
+        var search = Name + "="
+        var returnvalue = "";
+        if (document.cookie.length > 0) {
+        offset = document.cookie.indexOf(search)
+        if (offset != -1) { 
+        offset += search.length
+        end = document.cookie.indexOf(";", offset);
+        if (end == -1) end = document.cookie.length;
+        returnvalue=unescape(document.cookie.substring(offset, end))
+        }
+        }
+        return returnvalue;
+        }
+        
+        function onloadfunction(){
+        if (persistmenu=="yes"){
+        var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+        var cookievalue=get_cookie(cookiename)
+        if (cookievalue!="")
+        document.getElementById(cookievalue).style.display="block"
+        }
+        }
+        
+        function savemenustate(){
+        var inc=1, blockid=""
+        while (document.getElementById("sub"+inc)){
+        if (document.getElementById("sub"+inc).style.display=="block"){
+        blockid="sub"+inc
+        break
+        }
+        inc++
+        }
+        var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+        var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+        document.cookie=cookiename+"="+cookievalue
+        }
+        
+        if (window.addEventListener)
+        window.addEventListener("load", onloadfunction, false)
+        else if (window.attachEvent)
+        window.attachEvent("onload", onloadfunction)
+        else if (document.getElementById)
+        window.onload=onloadfunction
+        
+        if (persistmenu=="yes" && document.getElementById)
+        window.onunload=savemenustate
+        
+        </script>
+        <style type="text/css">
+            .menutitle{
+            cursor:pointer;
+            margin-bottom: 5px;
+            background-color:#ECECFF;
+            color:#000000;
+            width:140px;
+            padding:2px;
+            text-align:center;
+            font-weight:bold;
+            /*/*/border:1px solid #000000;/* */
+            }
+            
+            .submenu{
+            margin-bottom: 0.5em;
+            }
+            </style>
+            
+            <script type="text/javascript">
+            
+            /***********************************************
+            * Switch Menu script- by Martial B of http://getElementById.com/
+            * Modified by Dynamic Drive for format & NS4/IE4 compatibility
+            * Visit http://www.dynamicdrive.com/ for full source code
+            ***********************************************/
+            
+            var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+            var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page only
+            
+            if (document.getElementById){ //DynamicDrive.com change
+            document.write('<style type="text/css">\n')
+            document.write('.submenu{display: none;}\n')
+            document.write('</style>\n')
+            }
+            
+            function SwitchMenu(obj){
+                if(document.getElementById){
+                var el = document.getElementById(obj);
+                var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+                    if(el.style.display != "block"){ //DynamicDrive.com change
+                        for (var i=0; i<ar.length; i++){
+                            if (ar[i].className=="submenu") //DynamicDrive.com change
+                            ar[i].style.display = "none";
+                        }
+                        el.style.display = "block";
+                    }else{
+                        el.style.display = "none";
+                    }
+                }
+            }
+            
+            function get_cookie(Name) { 
+            var search = Name + "="
+            var returnvalue = "";
+            if (document.cookie.length > 0) {
+            offset = document.cookie.indexOf(search)
+            if (offset != -1) { 
+            offset += search.length
+            end = document.cookie.indexOf(";", offset);
+            if (end == -1) end = document.cookie.length;
+            returnvalue=unescape(document.cookie.substring(offset, end))
+            }
+            }
+            return returnvalue;
+            }
+            
+            function onloadfunction(){
+            if (persistmenu=="yes"){
+            var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+            var cookievalue=get_cookie(cookiename)
+            if (cookievalue!="")
+            document.getElementById(cookievalue).style.display="block"
+            }
+            }
+            
+            function savemenustate(){
+            var inc=1, blockid=""
+            while (document.getElementById("sub"+inc)){
+            if (document.getElementById("sub"+inc).style.display=="block"){
+            blockid="sub"+inc
+            break
+            }
+            inc++
+            }
+            var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+            var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+            document.cookie=cookiename+"="+cookievalue
+            }
+            
+            if (window.addEventListener)
+            window.addEventListener("load", onloadfunction, false)
+            else if (window.attachEvent)
+            window.attachEvent("onload", onloadfunction)
+            else if (document.getElementById)
+            window.onload=onloadfunction
+            
+            if (persistmenu=="yes" && document.getElementById)
+            window.onunload=savemenustate
+            
+            </script>
+            
+
+
+
+
+    <h1 class="w3-card-4 w3-text-opacity w3-black white-text">
+        <p><strong>Bienvenue dans 3vfanime </strong></p>
+        <img src="C:\Users\ismail\Desktop\3vfanime\3VFANIME-removebg-preview.png" width="150" height="150">
+        <a href="programme.html" style="color: white;">Nos programmes</a>
+        <a href="nouveau.html" style="color: white;">Nouveauté</a>
+        <a href="login.html" style="color: white; margin-right: 50px;">login</a>
+       
+    </h1>
+    <script> 
+   
+    </script>
+
+ 
+<h2 class="w3-black">
+    <div class="  w3-black navbar navbar-expand-lg navbar-dark">
+        <i class="fa fa-search w3-xxlarge"></i>
+        <p></p>
+        <div class="w3-input w3-border w3-round">
+            <input type="text" id="search" placeholder="rechercher" oninput="handleSearchInput()" />
+        </div>
+    </div>
+    <div id="searchResults"></div>
+    <li class="nav-item">
+        <a class="nav-link" href="menu.html">
+            <i class="fa fa-list"></i>
+            <strong>Famous  &#x2764; </strong>
+        </a>
+    </li>
+</h2>
+
+<script>
+    function handleSearchInput() {
+        var searchTerm = document.getElementById("search").value.toLowerCase();
+        var searchResults = document.getElementById("searchResults");
+        
+        if (searchTerm.includes("death")) {
+            var deathNoteLink = document.createElement("a");
+            deathNoteLink.href = "deathnote.html";
+            deathNoteLink.innerHTML = "Death Note";
+            
+            searchResults.innerHTML = "";
+            searchResults.appendChild(deathNoteLink);
+        } else if (searchTerm.startsWith("hxh")) {
+            var hxhLink = document.createElement("a");
+            hxhLink.href = "hunter.html";
+            hxhLink.innerHTML = "Hunter x Hunter";
+            
+            searchResults.innerHTML = "";
+            searchResults.appendChild(hxhLink);
+        } else if (searchTerm.includes("det")) {
+            var detentionaireLink = document.createElement("a");
+            detentionaireLink.href = "detentionaire.html";
+            detentionaireLink.innerHTML = "Detentionaire";
+            
+            searchResults.innerHTML = "";
+            searchResults.appendChild(detentionaireLink);
+        }  else if (searchTerm.startsWith("naruto")) {
+            var hxhLink = document.createElement("a");
+            hxhLink.href = "naruto.html";
+            hxhLink.innerHTML = "naruto";
+            
+            searchResults.innerHTML = "";
+            searchResults.appendChild(hxhLink);
+        }
+        else {
+            searchResults.innerHTML = "";
+        }
+    }
+</script>
+
+    <div class="w3-row">
+        <div class="w3-col l10">
+            <!-- ... Le contenu principal de votre page ... -->
+        </div>
+        <div class="w3-col l2 " style="position:fixed; top: 0;">
+            <nav style="z-index:1" class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center w3-black "></nav>
+        </div>
+    </div>
+   
+   <h2 class="w3-white"> <div class="cube-container">
+     
+      <a href="deathnote.html">
+          <div class="cube">
+              <img src="C:\Users\ismail\Desktop\3vfanime\death.jpeg" alt="100" width="300" height="200">
+              <img src="C:\Users\ismail\Desktop\3vfanime\ligth.jpeg" alt="100" width="300" height="200">
+              <img src="C:\Users\ismail\Desktop\3vfanime\ryouk.jpeg" alt="100" width="300" height="200">
+              <img src="C:\Users\ismail\Desktop\3vfanime\missa.jpeg" alt="100" width="300" height="200">
+              
+          </div>
+          <div class="axe">
+            <p style="color: gray;"> <strong>DEATHNOTE  </strong> </p>
+          </div>
+          
+
+      </a>
+      <br>
+      <div class="cube-container2">
+     
+        <a href="hunter.html">
+            <div class="cube">
+                <img src="C:\Users\ismail\Desktop\3vfanime\hxh.jpeg" alt="100" width="300" height="200">
+                <img src="C:\Users\ismail\Desktop\3vfanime\gon.jpeg" alt="100" width="300" height="200">
+                <img src="C:\Users\ismail\Desktop\3vfanime\kuroro.jpeg" alt="100" width="300" height="200">
+                <img src="C:\Users\ismail\Desktop\3vfanime\hisoka.jpeg" alt="100" width="300" height="200">
+                
+            </div>
+            <div class="axe">
+              <p style="color: gray;"> <strong>Hunter X Hunter  </strong> </p>
+            </div>
+        </a>
+      </br>
+        <br>
+       
+        </h2>
+        <h3 class="w3-white">
+          <div class="cube-container3">
+     
+            <a href="detentionaire.html">
+                <div class="cube">
+                    <img src="C:\Users\ismail\Desktop\3vfanime\detentionaire.jpeg" alt="100" width="300" height="200">
+                    <img src="C:\Users\ismail\Desktop\3vfanime\det1.jpeg" alt="100" width="300" height="200">
+                    <img src="C:\Users\ismail\Desktop\3vfanime\det2.jpeg" alt="100" width="300" height="200">
+                    <img src="C:\Users\ismail\Desktop\3vfanime\det3.jpeg" alt="100" width="300" height="200">
+                    
+                </div>
+                <div class="axe">
+                  <p style="color: gray;"> <strong>Detentionaire  </strong> </p>
+                </div>
+            </a>
+            <div class="cube-container3">
+     
+                <a href="naruto.html">
+                    <div class="cube">
+                        <img src="C:\Users\ismail\Desktop\3vfanime\naruto.jpeg" alt="100" width="300" height="200">
+                        <img src="C:\Users\ismail\Desktop\3vfanime\uchiwa.jpeg" alt="100" width="300" height="200">
+                        <img src="C:\Users\ismail\Desktop\3vfanime\akat.jpeg" alt="100" width="300" height="200">
+                        <img src="C:\Users\ismail\Desktop\3vfanime\demon.jpeg" alt="100" width="300" height="200">
+                        
+                    </div>
+                    <div class="axe">
+                      <p style="color: gray;"> <strong>Naruto  </strong> </p>
+                    </div>
+                </a>
+        </h3>
+        
+        <h4 class="w3-white">
+            <p><strong>Plus d'anime </strong> &#x2764;</p>
+            <div class="cube-container3">
+     
+                <a href="https://v5.voiranime.com/">
+            <img src="C:\Users\ismail\Desktop\3vfanime\v.jpeg" alt="100" width="280" height="180"></div></a>
+            <div class="axe1">
+                <p style="color: gray;"> <strong>Voiranime  </strong> <a href="https://v5.voiranime.com/"></a></p>
+              </div>
+              
+        </h4>
+   
+        <h5 class="w3-white">
+            
+            <div class="cube-container4">
+     
+                <a href="https://mali-events.com/">
+            <img src="C:\Users\ismail\Desktop\3vfanime\mali event.jpg" alt="100" width="280" height="180"></div></a>
+            <div class="axe1">
+                <p style="color: gray;"> <strong>Mali-events  </strong><a href="https://mali-events.com/"></a> </p>
+              </div>
+              
+        </h5>
+   
+        <h6 class="w3-white">
+            
+            <div class="cube-container4">
+     
+                <a href="https://www.youtube.com/@LeMangaRap">
+            <img src="C:\Users\ismail\Desktop\3vfanime\cookiezan.jpeg" alt="100" width="280" height="180"></div></a>
+            <div class="axe1">
+                <p style="color: gray;"> <strong>Cookiezan  </strong></p>
+              </div>
+              
+        </h6>
+        <h7 class="w3-white">
+            
+            <div class="cube-container4">
+     
+                <a href="https://www.youtube.com/@NegritoSenpai">
+            <img src="C:\Users\ismail\Desktop\3vfanime\negrito.jpeg" alt="100" width="280" height="180"></div></a>
+            <div class="axe1">
+                <p style="color: gray;"> <strong>Negrito Sensei  </strong><a href="https://mali-events.com/"></a> </p>
+              </div>
+              
+        </h7>
+        <br>
+        <h8>
+
+        </h8>
+        <div class="site-footer w3-black w3-margin-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <p>Adresse : Tunis</p>
+                        <p>Téléphone : (+216) 26841092</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61550538162263"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/barry_ismaila4/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    
+</body>
+</html>

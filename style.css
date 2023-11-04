@@ -1,0 +1,136 @@
+/* Applique un style sans soulignement aux liens */
+a {
+  text-decoration: none;
+  color: blanchedalmond;
+  margin-right: 20px;
+}
+
+/* Ajoutez le style pour déplacer le cube un peu à droite */
+.cube-container {
+  perspective: 1000px;
+  margin-top: 30px;
+  margin-left: 100px; /* Ajustez cette valeur selon vos préférences */
+  display: flex;
+  justify-content: flex-start;
+}
+.cube-container2 {
+  perspective: 1000px;
+  margin-top: 30px;
+  margin-left: 100px; /* Ajustez cette valeur selon vos préférences */
+  display: flex;
+  justify-content: flex-start;
+}
+.cube-container3 {
+  perspective: 1000px;
+  margin-top: 30px;
+  margin-left: 100px; /* Ajustez cette valeur selon vos préférences */
+  display: flex;
+  justify-content: flex-start;
+}
+.cube-container4 {
+  perspective: 1000px;
+  margin-top: 60px;
+  margin-left: 100px; /* Ajustez cette valeur selon vos préférences */
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/* Ajoutez un style pour rendre les textes blancs */
+.white-text {
+  color: white;
+}
+.white-link {
+  color: white;
+}
+
+.axe{
+  margin-right: 80px;
+  margin-top: -70px;
+}
+.axe1{
+  margin-top: -70px;
+  margin-left: -380px;
+ 
+}
+.cube {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: rotateCube 15s infinite linear;
+}
+
+.cube img {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+}
+
+.cube img:nth-child(1) { transform: rotateY(0deg) translateZ(150px); }
+.cube img:nth-child(2) { transform: rotateY(90deg) translateZ(150px); }
+.cube img:nth-child(3) { transform: rotateY(180deg) translateZ(150px); }
+.cube img:nth-child(4) { transform: rotateY(270deg) translateZ(150px); }
+
+@keyframes rotateCube {
+  0%, 100% { transform: rotateY(0deg); }
+  25% { transform: rotateY(90deg); }
+  50% { transform: rotateY(180deg); }
+  75% { transform: rotateY(270deg); }
+}
+/* Ajoutez des styles pour créer l'effet de nuage ou de bulle */
+/* Ajoutez des styles pour créer une bulle stylisée orientée verticalement */
+/* Ajoutez des styles pour créer une bulle stylisée */
+/* Ajoutez des styles pour créer une forme de nuage */
+.cloud-bubble {
+  background-color: #f2f2f29d;
+  border-radius: 20px;
+  padding: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.cloud-bubble::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  transform: translateX(-50%);
+}
+.w3-white {
+  text-align: center;
+}
+.w3-sidebar {
+  right: 0;
+  left: auto;
+  display: flex;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+nav#offcanvas-menu{ /* Full screen nav menu */
+  width: 250px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  visibility: hidden; /* this is for browsers that don't support CSS3 translate3d */
+  position: fixed; /* fixed menu position */
+  transform: translate3d(-250px,0,0); /* shift menu -width to hide it initially */
+  box-sizing: border-box; /* include padding/ border as part of declared menu width */
+  background: #C1F2BC;
+  display: block;
+  text-align: center;
+  overflow: auto;
+  transition: transform 0.5s, visibility 0s 0.5s; /* transition settings. */
+}
+*{
+  font-family:helvetica, sans-serif; 
+}

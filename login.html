@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+</head>
+<body class="entrer w3-black">
+    <div class="container mt-5">
+        <h2>Formulaire d'inscription</h2>
+        <ul>
+            <li>
+                <label for="name">Nom:</label>
+                <input type="text" id="name" required minlength="3" maxlength="20" size="10">
+            </li>
+            <li>
+                <label for="firstname">Prénom:</label>
+                <input type="text" id="firstname" required minlength="3" maxlength="20" size="10">
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="name@gmail.com" required minlength="5" maxlength="30" size="20">
+            </li>
+            <li>
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" pattern="[a-fA-F0-9]{6}" title="Doit contenir 6 chiffres hexadécimaux" maxlength="30" size="20">
+            </li>
+            <li>
+                <label for="preferences">Préférences:</label>
+                <textarea name="preferences" id="preferences" cols="30" rows="3" required minlength="5" maxlength="30"></textarea>
+            </li>
+            <li>
+                <label><input type="radio" name="sexe" value="f" checked>Femme</label>
+                <label><input type="radio" name="sexe" value="H">Homme</label>
+            </li>
+        </ul>
+        
+        <br>
+        <button onclick="valider()">Valider</button>
+    </div>
+    
+    <h3 class="commentaire" id="commentaire" style="display:none;">
+        <!-- Les informations du commentateur seront affichées ici -->
+    </h3>
+    
+    <style>
+        .commentaire {
+            position: relative;
+            background-color: #f9f9f9;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+    </style>
+    
+    <script>
+        function valider() {
+            var nameInput = document.getElementById("name").value;
+            var firstnameInput = document.getElementById("firstname").value;
+            var preferencesInput = document.getElementById("preferences").value;
+            
+            if (nameInput.length >= 3 && nameInput.length <= 20 &&
+                firstnameInput.length >= 3 && firstnameInput.length <= 20) {
+                var commentateurInfo = "<strong>" + firstnameInput + " " + nameInput + "</strong><br>Préférences: " + preferencesInput;
+                var commentaireH3 = document.getElementById("commentaire");
+                commentaireH3.innerHTML = commentateurInfo;
+                commentaireH3.style.display = "block";
+            } else {
+                alert("Veuillez saisir correctement les coordonnées");
+            }
+        }
+    </script>
+</body>
+</html>

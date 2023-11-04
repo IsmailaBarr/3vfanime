@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donner une note</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            display: inline-block;
+        }
+
+        .star {
+            font-size: 24px;
+            color: white; /* Étoiles blanches par défaut */
+            cursor: pointer;
+        }
+
+        .star.selected,
+        .star:hover {
+            color: #ffcc00; /* Étoiles jaunes au survol et sélection */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Donner une note
+    </header>
+    <section>
+        <p>Donnez votre note :</p>
+        <div class="stars">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+        </div>
+    </section>
+    <footer>
+        <div class="contact-info">
+            Contact: +216 26841092
+        </div>
+    </footer>
+    <script>
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-rating');
+                stars.forEach(s => s.classList.remove('selected'));
+                for (let i = 1; i <= rating; i++) {
+                    stars[i - 1].classList.add('selected');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
